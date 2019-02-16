@@ -22,19 +22,14 @@ There're:
      5 STAGES:
         - splashScreen
         - gameScreen1
-        - gameScreen2
         - gameoverScreen 
         - winScreen 
 
 
 ## Backlog
     ScreenShoot: (background color: blue)
-
     Player: The player only moves in two directions. (Rigth-Left)
-
     Obstacle/enemy: It's just a layer of brick(s) cover(s) part of the screen. It will be fixed (bonus The layer of brick(s) will be moving down.)
-
-
 
 ## Estructuras de Datos
 
@@ -42,10 +37,8 @@ main.js
     buildDom();
      buildSplashScreen();
      buildGameScreen();
-     buildGameScreen();
      buildGameOverScreen();
      buildWinScreen();
-
 player.js
     this.lives;
     this.x;
@@ -53,29 +46,26 @@ player.js
     this.size;
     this.speed;
     this.direction;
-
     update();
     draw();
     checkColision();
-
-
 enemy.js
     this.x;
     this.y;
     this.size;
     this.direction;
     ¿this.speed?  
-
     update();
     draw();
     checkInSceen();
-
 game.js
     startloop();
     loop();
     onGameOver();
     this.player
     this.enemies
+ball.js
+
 
 ## States y States Transitions
 
@@ -85,6 +75,7 @@ Definicion del las transiciones del juego y del main.
      go to -> gameScreen1
 - gameScreen1
     go to -> gameScreen2
+    go to -> gameoverScreen
 - gameScreen2
     go to -> gameoverScreen
     go to -> winScreen
@@ -100,23 +91,22 @@ Definicion del las transiciones del juego y del main.
 DOM (HTML,CSS,JS)
 DEFINE MAIN
 DEFINE GAME
+DEFINE LOOP
 DEFINITION PLAYER/BRICK
 PLAYER MOVEMENTS
-DEFINITION AND MOVIMENT BALL
+DEFINITION BALL
+MOVIMENT BALL
 DEFINITION OBSTACLE
-OBSTACLE MOVEMENTS
 COLLISION
 TRACK THE SCORE (AND WIN&LOOSE)
 KEYBOARD CONTROLS
-CCS
-MUSIC
+GAMEOVER
+
 
 
 ## Links
 
-### Trello
 
-[Link url](https://trello.com)
 
 ### Git
 
