@@ -2,7 +2,7 @@
 
 class Player {
     constructor(canvas,lives) {
-        this.size = 80;
+        this.size = 200;
         this.canvas = canvas;
         this.lives = lives;
         this.ctx = this.canvas.getContext('2d');
@@ -17,8 +17,8 @@ class Player {
     }
 
     draw(){
-        this.ctx.fillStyle = 'pink';
-        this.ctx.fillRect( this.x - this.size/2, this.y - this.size/2, this.size, this.size/5)
+        this.ctx.fillStyle = 'white';
+        this.ctx.fillRect( this.x - this.size/2, this.y - this.size/2, this.size, this.size/8)
     }
 
     setDirection(direction){
@@ -32,5 +32,6 @@ class Player {
         }
         
     }
+    
 
 }

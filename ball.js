@@ -6,9 +6,9 @@ class Ball {
         this.ctx = this.canvas.getContext('2d');
         this.x= this.canvas.width/2 ;
         this.y= 250;
-        this.speed = 4;
+        this.speed = 8;
         this.directionY = 1;
-        this.directionX = 1.2;
+        this.directionX = 0.8;
         this.ballRadius =10;
     }
     
@@ -17,33 +17,43 @@ class Ball {
         this.x = this.x + this.directionX * this.speed;
     }
 
+    
 
     checkScreen(){
 
-        if( this.x <= 0 || this.y <= 0 || this.x >= this.canvas.width || this.y >= this.canvas.height) {
-            this.directionX = -this.directionX
+        if(this.x <= 0  || this.x >= this.canvas.width) {
+            this.directionX = -this.directionX 
             this.directionY = this.directionY
+        }else if (this.y <= 0 || this.y >= this.canvas.height) {
+            this.directionX = this.directionX 
+            this.directionY = -this.directionY
+
         }
-
-
-        // if(this.y - this.size/2 <= 0){
-        //     this.direction = 1
-        // }else if(this.y + this.size/2 >=this.canvas.width){
-        //     this.direction = -1;
-        // }*/
-       // if this.x>this.canvas<0 =>1;
-       //if this.x>this.canvas.whidth => -1; 
+        
     }
 
+    /*checkallCollision = function(player){
+        const collRight = player.x <  ball.x + 2*ball.radius; 
+        const collLeft = ball.x < player.x + player.width;
+        const collTop =player.y < ball.y + 2*ball.radius;
+        const collBotton =ball.y < player.y + player.height;
 
+        if(collRight && collLeft && collTop && collBotton) {
+            return true;
+        }
+
+        return false;
+    }       
+    */
     draw(){
         this.ctx.beginPath();
         this.ctx.arc(this.x, this.y, this.ballRadius, 0, Math.PI*2);
-        this.ctx.fillStyle = "#0095DD";
+        this.ctx.fillStyle = "#"+((1<<24)*Math.random()|0).toString(16); //“#”+Math.floor(Math.random()*16777215).toString(16);
         this.ctx.fill();
         this.ctx.closePath(); 
     }
     
-
+    
   
+
 }

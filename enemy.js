@@ -1,13 +1,13 @@
 'use strict'
 
 class Enemy {
-    constructor(canvas,y) {
+    constructor(canvas,x,y) {
     this.size = 80;
     this.canvas = canvas;
     this.ctx = this.canvas.getContext('2d');
-    this.x= this.canvas.width/15;
-    this.y= 100;        
-    this.speed = 5;
+    this.x= x;
+    this.y= y;
+    this.speed = 2;
     this.direction = 5;
     };
     
@@ -20,8 +20,8 @@ class Enemy {
     }
 
     draw(){
-        this.ctx.fillStyle= 'black';
-        this.ctx.fillRect( this.x - this.size/2, this.y - this.size/2, this.size, this.size/5)
+        this.ctx.fillStyle= '#5DBCD2';
+        this.ctx.fillRect( this.x, this.y, this.size, this.size/5)
     };
 
     checkScreen(){

@@ -9,7 +9,7 @@ const main = () =>{
         const splashScreen = buildDom(`
         <section class = "splash-screen">
         <h1>Breakbot</h1>
-        <button>C'mon!</button>
+        <button>Start</button>
         </section>
             `)
         const startButton = document.querySelector('button');
