@@ -2,7 +2,7 @@
 
 class Player {
     constructor(canvas,lives) {
-        this.size = 200;
+        this.size = 150;
         this.canvas = canvas;
         this.lives = lives;
         this.ctx = this.canvas.getContext('2d');
@@ -17,8 +17,8 @@ class Player {
     }
 
     draw(){
-        this.ctx.fillStyle = 'white';
-        this.ctx.fillRect( this.x - this.size/2, this.y - this.size/2, this.size, this.size/8)
+        this.ctx.fillStyle = 'brown';
+        this.ctx.fillRect( this.x - this.size/2, this.y - this.size/8, this.size, this.size/8)
     }
 
     setDirection(direction){
@@ -27,7 +27,7 @@ class Player {
 
     checkScreen(){
  
-        if( this.x <= 0+4 || this.x >= this.canvas.width-4) {
+        if( this.x <= 0+75 || this.x >= this.canvas.width-75) {
             this.direction = -this.direction
         }
         

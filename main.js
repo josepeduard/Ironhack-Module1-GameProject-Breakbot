@@ -4,12 +4,12 @@ const main = () =>{
         main.innerHTML = html;
         return main;
     };
-
+    /*<h1>Breakbot</h1>*/
     const buildSplashScreen = () => {
         const splashScreen = buildDom(`
         <section class = "splash-screen">
-        <h1>Breakbot</h1>
-        <button>Start</button>
+        
+        <button>Breakbot</button>
         </section>
             `)
         const startButton = document.querySelector('button');

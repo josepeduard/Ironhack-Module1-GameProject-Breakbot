@@ -26,16 +26,25 @@ body {
     height: 100vh;
     border: 1px solid black;
     background-image: url(bonus/breakbot.png);
-    background-position: center;
+    /*background-position: center;*/
     background-size: cover;
 }
 
-body{
+.splash-screen{
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     border: 1px solid black;
-    background-image: url(bonus/breakbot2.jpeg);
+    background-image: url(bonus/breakbot3.gif);
+    background-size: cover;
     background-position: center;
+    text-align: center;
     
 }
 
+button{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: sans-serif;
+}

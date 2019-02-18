@@ -62,6 +62,7 @@ class Game{
        this.enemies.forEach((enemy) => {
            enemy.checkScreen();
          });
+         this.ball.checkallCollision(this.player);
        //this.obstacle.checkScreen();
        //this.obstacle.update();
 

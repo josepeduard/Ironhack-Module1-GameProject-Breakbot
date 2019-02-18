@@ -32,19 +32,25 @@ class Ball {
         
     }
 
-    /*checkallCollision = function(player){
-        const collRight = player.x <  ball.x + 2*ball.radius; 
-        const collLeft = ball.x < player.x + player.width;
-        const collTop =player.y < ball.y + 2*ball.radius;
-        const collBotton =ball.y < player.y + player.height;
+    checkallCollision (player){
+        
+        const collRight = this.x - this.ballRadius < player.x + player.size/2;
+        const collLeft = this.x + this.ballRadius > player.x - player.size/2;
+        const collTop = this.y - this.ballRadius < player.y + player.size/16;
+        const collBotton = this.y + this.ballRadius > player.y - player.size/16;
 
-        if(collRight && collLeft && collTop && collBotton) {
-            return true;
+        console.log(collTop,collRight,collTop,collBotton);
+        
+
+        if(collTop && collBotton && collRight &&collLeft) {
+            console.log('fdddffddf')
+            this.directionX = this.directionX 
+            this.directionY = -this.directionY;
         }
 
         return false;
     }       
-    */
+   
     draw(){
         this.ctx.beginPath();
         this.ctx.arc(this.x, this.y, this.ballRadius, 0, Math.PI*2);
