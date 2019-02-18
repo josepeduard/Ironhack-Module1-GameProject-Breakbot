@@ -5,8 +5,8 @@ class Ball {
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
         this.x= this.canvas.width/2 ;
-        this.y= 250;
-        this.speed = 8;
+        this.y= 350;
+        this.speed = 6;
         this.directionY = 1;
         this.directionX = 0.8;
         this.ballRadius =10;
@@ -56,13 +56,31 @@ class Ball {
 
         return false;
     }       
-   
+    
+
+    ckeckCollisionEnemy (enemy){
+        const collRight = this.x - this.ballRadius < enemy.x + enemy.size/2;
+        const collLeft = this.x + this.ballRadius > enemy.x - enemy.size/2;
+        const collTop = this.y - this.ballRadius < enemy.y + enemy.size/16;
+        const collBotton = this.y + this.ballRadius > enemy.y - enemy.size/16;
+
+        if(collTop && collBotton && collRight &&collLeft) {
+             this.directionX = this.directionX 
+             this.directionY = -this.directionY;
+            return true;
+            }
+        
+        return false;
+    }
+
     draw(){
         this.ctx.beginPath();
         this.ctx.arc(this.x, this.y, this.ballRadius, 0, Math.PI*2);
         this.ctx.fillStyle = "#"+((1<<24)*Math.random()|0).toString(16); //“#”+Math.floor(Math.random()*16777215).toString(16);
         this.ctx.fill();
         this.ctx.closePath(); 
+        this.ctx.font = "50px Artial";
+        this.ctx.fillText("Lives " + this.lives, 150, 150)
     }
     
     

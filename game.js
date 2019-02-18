@@ -64,6 +64,11 @@ class Game{
            enemy.checkScreen();
         });
        this.ball.checkallCollision(this.player);
+       this.enemies.forEach((enemy,index)=>{
+           if (this.ball.ckeckCollisionEnemy(enemy)) {
+                this.enemies.splice(index,1)
+           }
+       })
        
        
 
