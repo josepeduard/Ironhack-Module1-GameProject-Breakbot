@@ -13,8 +13,8 @@ class Game{
    }
 
    startLoop (){
-       this.player = new Player(this.canvas,3);
-       this.ball = new Ball(this.canvas);
+       this.player = new Player(this.canvas);
+       this.ball = new Ball(this.canvas,3);
        //this.secondball = new Secondball(this.canvas);
        this.enemies.push(new Enemy(this.canvas, 100, 100));
        this.enemies.push(new Enemy(this.canvas, 300, 125));
@@ -29,20 +29,21 @@ class Game{
 
        const loop = () => {
 
-           /*if(Math.random() > 0.97){
-               const y = Math.random() * this.canvas.height;
-               this.enemies.push(new Enemy(this.canvas, y))
-           }*/
+           
 
            //this.checkAllCollisions();
            this.updateCanvas();
            this.clearCanvas();
            this.drawCanvas();
-
+            if(this.ball.lives <= 0){
+                this.isGameOver = true;
+            }
            if(!this.isGameOver){
                window.requestAnimationFrame(loop);
            }
-
+           if(this.isGameOver){
+            this.onGameOver();
+           }
 
        }
        window.requestAnimationFrame(loop);
@@ -58,14 +59,13 @@ class Game{
        //this.enemies.checkScreen();
        this.enemies.forEach((enemy) => {
            enemy.update();
-         });
+        });
        this.enemies.forEach((enemy) => {
            enemy.checkScreen();
-         });
-         this.ball.checkallCollision(this.player);
-       //this.obstacle.checkScreen();
-       //this.obstacle.update();
-
+        });
+       this.ball.checkallCollision(this.player);
+       
+       
 
        /*this.enemies.forEach((enemy)=>{
            enemy.update();
@@ -83,12 +83,14 @@ class Game{
        this.enemies.forEach((enemy) => {
            enemy.draw();
          });
-       //this.obstacle.draw();
+       
       /* this.enemies.forEach((enemy)=>{
            enemy.draw();
        })*/
    };
-   gameOverCallback(callback){
-       this.onGameOver = callback;
+
+
+   gameOverCallback(callback){ 
+    this.onGameOver = callback;
    }
 }

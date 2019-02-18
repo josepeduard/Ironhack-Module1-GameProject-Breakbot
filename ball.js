@@ -1,6 +1,6 @@
 'use strict'
 class Ball {
-    constructor(canvas) {
+    constructor(canvas,lives) {
         this.size = 30;
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
@@ -10,6 +10,7 @@ class Ball {
         this.directionY = 1;
         this.directionX = 0.8;
         this.ballRadius =10;
+        this.lives = lives;
     }
     
     update(){
@@ -24,10 +25,15 @@ class Ball {
         if(this.x <= 0  || this.x >= this.canvas.width) {
             this.directionX = -this.directionX 
             this.directionY = this.directionY
-        }else if (this.y <= 0 || this.y >= this.canvas.height) {
+        }else if (this.y <= 0) {
             this.directionX = this.directionX 
             this.directionY = -this.directionY
 
+        }else if (this.y >= this.canvas.height){
+            this.directionX = this.directionX 
+            this.directionY = -this.directionY
+            this.loseLive();
+            console.log(this.lives)
         }
         
     }
@@ -39,11 +45,11 @@ class Ball {
         const collTop = this.y - this.ballRadius < player.y + player.size/16;
         const collBotton = this.y + this.ballRadius > player.y - player.size/16;
 
-        console.log(collTop,collRight,collTop,collBotton);
+        //console.log(collTop,collRight,collTop,collBotton);
         
 
         if(collTop && collBotton && collRight &&collLeft) {
-            console.log('fdddffddf')
+           // console.log('fdddffddf')
             this.directionX = this.directionX 
             this.directionY = -this.directionY;
         }
@@ -60,6 +66,9 @@ class Ball {
     }
     
     
+    loseLive(){
+        this.lives--;
+    }
   
 
 }
