@@ -8,7 +8,7 @@ class Player {
         this.ctx = this.canvas.getContext('2d');
         this.x= this.canvas.width/2 ;
         this.y= this.canvas.height-50;
-        this.speed = 8;
+        this.speed = 10;
         this.direction = 0;
         
     }
@@ -17,7 +17,7 @@ class Player {
     }
 
     draw(){
-        this.ctx.fillStyle = 'brown';
+        this.ctx.fillStyle = '#FCF920';
         this.ctx.fillRect( this.x - this.size/2, this.y - this.size/8, this.size, this.size/8)
     }
 
