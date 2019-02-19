@@ -56,7 +56,7 @@ const main = () =>{
     const buildGameOver = () => {
     const gameOverScreen = buildDom(`
         <section class = "games-over">
-        <h1></h1>
+        <h1>LOSER!</h1>
         <button class="restart">Restart</button>
     `);
     const restartButton = document.querySelector('button');
