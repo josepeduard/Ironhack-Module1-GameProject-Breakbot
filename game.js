@@ -15,17 +15,8 @@ class Game{
    startLoop (){
        this.player = new Player(this.canvas);
        this.ball = new Ball(this.canvas,3);
-       //this.secondball = new Secondball(this.canvas);
-       /*this.enemies.push(new Enemy(this.canvas, 100, 100));
-       this.enemies.push(new Enemy(this.canvas, 300, 125));
-       this.enemies.push(new Enemy(this.canvas, 500, 150));
-       this.enemies.push(new Enemy(this.canvas, 500, 150));
-       this.enemies.push(new Enemy(this.canvas, 700, 200));
-       this.enemies.push(new Enemy(this.canvas, 100, 275));
-       this.enemies.push(new Enemy(this.canvas, 300, 300));
-       this.enemies.push(new Enemy(this.canvas, 500, 325));
-       this.enemies.push(new Enemy(this.canvas, 700, 350));*/
-        this.enemies.push(new Enemy(this.canvas, 100, 100));
+        //this.secondball = new Ball(this.canvas);
+       this.enemies.push(new Enemy(this.canvas, 100, 100));
        this.enemies.push(new Enemy(this.canvas, 200, 125));
        this.enemies.push(new Enemy(this.canvas, 300, 150));
        this.enemies.push(new Enemy(this.canvas, 400, 175));
@@ -33,6 +24,15 @@ class Game{
        this.enemies.push(new Enemy(this.canvas, 600, 225));
        this.enemies.push(new Enemy(this.canvas, 700, 250));
        this.enemies.push(new Enemy(this.canvas, 800, 275));
+       this.enemies.push(new Enemy(this.canvas, 900, 300));
+       /* this.enemies.push(new Enemy(this.canvas, 100, 100));
+       this.enemies.push(new Enemy(this.canvas, 200, 125));
+       this.enemies.push(new Enemy(this.canvas, 300, 150));
+       this.enemies.push(new Enemy(this.canvas, 400, 175));
+       this.enemies.push(new Enemy(this.canvas, 500, 200));
+       this.enemies.push(new Enemy(this.canvas, 600, 225));
+       this.enemies.push(new Enemy(this.canvas, 700, 250));
+       this.enemies.push(new Enemy(this.canvas, 800, 275));*/
        /*this.enemies.push(new Enemy(this.canvas, 900, 300));
        this.enemies.push(new Enemy(this.canvas, 1000, 325));
        this.enemies.push(new Enemy(this.canvas, 1100, 350));

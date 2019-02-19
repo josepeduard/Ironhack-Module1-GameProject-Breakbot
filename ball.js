@@ -63,7 +63,7 @@ class Ball {
         const collLeft = this.x + this.ballRadius > enemy.x - enemy.size/2;
         const collTop = this.y - this.ballRadius < enemy.y + enemy.size/16;
         const collBotton = this.y + this.ballRadius > enemy.y - enemy.size/16;
-
+        
         if(collTop && collBotton && collRight &&collLeft) {
              this.directionX = this.directionX 
              this.directionY = -this.directionY;
