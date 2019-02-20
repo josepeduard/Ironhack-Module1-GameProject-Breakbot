@@ -5,7 +5,7 @@ class Ball {
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
         this.x= this.canvas.width/2 ;
-        this.y= 350;
+        this.y= 251;
         this.speed = 8;
         this.directionY = 1;
         this.directionX = 0.8;
@@ -91,10 +91,10 @@ class Ball {
   
     deleteball(){
         this.x= this.canvas.width/2 ;
-        this.y= 250;
+        this.y= 151;
         this.speed = 6;
         this.directionY = 1;
-        this.directionX = 0.6;
+        this.directionX = 0.5;
     }
 
 

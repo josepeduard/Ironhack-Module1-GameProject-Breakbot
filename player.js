@@ -8,7 +8,7 @@ class Player {
         this.ctx = this.canvas.getContext('2d');
         this.x= this.canvas.width/2 ;
         this.y= this.canvas.height-50;
-        this.speed = 12;
+        this.speed = 10;
         this.direction = 0;
         
     }
