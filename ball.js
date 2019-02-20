@@ -91,7 +91,7 @@ class Ball {
   
     deleteball(){
         this.x= this.canvas.width/2 ;
-        this.y= 350;
+        this.y= 250;
         this.speed = 6;
         this.directionY = 1;
         this.directionX = 0.6;
