@@ -30,9 +30,10 @@ class Ball {
             this.directionY = -this.directionY
 
         }else if (this.y >= this.canvas.height){
-            this.directionX = this.directionX 
-            this.directionY = -this.directionY
+            //this.directionX = this.directionX 
+            //this.directionY = -this.direction
             this.loseLive();
+            this.deleteball();
             console.log(this.lives)
         }
         
@@ -88,5 +89,13 @@ class Ball {
         this.lives--;
     }
   
+    deleteball(){
+        this.x= this.canvas.width/2 ;
+        this.y= 350;
+        this.speed = 6;
+        this.directionY = 1;
+        this.directionX = 0.8;
+    }
+
 
 }
