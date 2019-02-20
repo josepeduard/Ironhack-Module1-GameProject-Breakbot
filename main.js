@@ -53,7 +53,7 @@ const main = () =>{
 
     const buildWinner = () => {
         const WinnerScreen = buildDom(`
-            <section class = "games-over">
+            <section class = "games-winner">
             <h1>Winner</h1>
             <button class="restart">Restart</button>
         `);
