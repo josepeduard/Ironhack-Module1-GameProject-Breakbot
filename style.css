@@ -62,8 +62,8 @@ button{
     --neon-shadow-bright:0 0 8px 4px var(--bright-neon), 0 0 8px 4px var(--bright-neon) inset;
     --neon-shadow-text:0 0 7px var(--primary-neon);
     
-    width:calc(20vw + 6px);
-    height:calc(8vw + 6px);
+    width:300px;
+    height:66px;
     color:var(--primary-neon);
     text-shadow:var(--neon-shadow-text);
     border:3px solid var(--primary-neon);
@@ -165,7 +165,7 @@ button{
 
 h1{
     color:#FF1177;
-    font-size: 100px;
+    font-size: 66px;
 }
 
 h1:hover{
@@ -198,3 +198,6 @@ h1:hover{
     }
   }
   
+  audio{
+    display: none;
+  }

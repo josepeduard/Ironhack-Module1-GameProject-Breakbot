@@ -18,6 +18,9 @@ const main = () =>{
 
     const buildGameScreen = () => {
         const gameScreen = buildDom(`
+        <audio controls autoplay loop>
+            <source src="bonus/breakbotRemix.mp3" type="audio/mpeg">
+        </audio>
         <section class="game-screen">
             <canvas></canvas>
         </section>
