@@ -8,7 +8,7 @@ const main = () =>{
     const buildSplashScreen = () => {
         const splashScreen = buildDom(`
         <section class = "splash-screen">
-        <button>Breakbot</button>
+        <button class="restart">Breakbot</button>
         <audio controls autoplay loop>
         <source src="bonus/ganador.mp3" type="audio/mpeg">
         </audio>

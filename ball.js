@@ -8,7 +8,7 @@ class Ball {
         this.y= 251;
         this.speed = 8;
         this.directionY = 1;
-        this.directionX = 0.8;
+        this.directionX = 1;
         this.ballRadius =9;
         this.lives = lives;
     }
@@ -94,7 +94,7 @@ class Ball {
         this.y= 151;
         this.speed = 6;
         this.directionY = 1;
-        this.directionX = 0.5;
+        this.directionX = 1.5;
     }
 
 
