@@ -25,6 +25,10 @@ class Game{
        this.enemies.push(new Enemy(this.canvas, 700, 250));
        this.enemies.push(new Enemy(this.canvas, 800, 275));
        this.enemies.push(new Enemy(this.canvas, 900, 300));
+       this.enemies.push(new Enemy(this.canvas, 1000, 325));
+       this.enemies.push(new Enemy(this.canvas, 1100, 350));
+       this.enemies.push(new Enemy(this.canvas, 1200, 375));
+       this.enemies.push(new Enemy(this.canvas, 1300, 400));
        /* this.enemies.push(new Enemy(this.canvas, 100, 100));
        this.enemies.push(new Enemy(this.canvas, 200, 125));
        this.enemies.push(new Enemy(this.canvas, 300, 150));

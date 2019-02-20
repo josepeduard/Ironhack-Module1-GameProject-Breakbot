@@ -6,7 +6,7 @@ class Ball {
         this.ctx = this.canvas.getContext('2d');
         this.x= this.canvas.width/2 ;
         this.y= 350;
-        this.speed = 6;
+        this.speed = 10;
         this.directionY = 1;
         this.directionX = 0.8;
         this.ballRadius =10;
@@ -62,8 +62,8 @@ class Ball {
     ckeckCollisionEnemy (enemy){
         const collRight = this.x - this.ballRadius < enemy.x + enemy.size/2;
         const collLeft = this.x + this.ballRadius > enemy.x - enemy.size/2;
-        const collTop = this.y - this.ballRadius < enemy.y + enemy.size/16;
-        const collBotton = this.y + this.ballRadius > enemy.y - enemy.size/16;
+        const collTop = this.y - this.ballRadius < enemy.y + enemy.size/10;
+        const collBotton = this.y + this.ballRadius > enemy.y - enemy.size/10;
         
         if(collTop && collBotton && collRight &&collLeft) {
              this.directionX = this.directionX 
@@ -92,9 +92,9 @@ class Ball {
     deleteball(){
         this.x= this.canvas.width/2 ;
         this.y= 350;
-        this.speed = 6;
+        this.speed = 8;
         this.directionY = 1;
-        this.directionX = 0.8;
+        this.directionX = 0.6;
     }
 
 

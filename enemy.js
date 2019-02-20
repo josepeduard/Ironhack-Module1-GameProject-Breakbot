@@ -21,7 +21,7 @@ class Enemy {
 
     draw(){
         this.ctx.fillStyle= '#5DBCD2';
-        this.ctx.fillRect( this.x, this.y, this.size, this.size/5)
+        this.ctx.fillRect( this.x-this.size/2, this.y-this.size/10, this.size, this.size/5)
     };
 
     checkScreen(){
