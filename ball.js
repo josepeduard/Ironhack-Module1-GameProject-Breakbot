@@ -34,7 +34,7 @@ class Ball {
             //this.directionY = -this.direction
             this.loseLive();
             this.deleteball();
-            console.log(this.lives)
+            //console.log(this.lives)
         }
         
     }
