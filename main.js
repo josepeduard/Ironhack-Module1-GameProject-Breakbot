@@ -7,8 +7,10 @@ const main = () =>{
     /*<h1>Breakbot</h1>*/
     const buildSplashScreen = () => {
         const splashScreen = buildDom(`
+        <audio controls autoplay loop>
+            <source src="bonus/brekbotRemix2.mp3" type="audio/mpeg">
+        </audio>
         <section class = "splash-screen">
-        
         <button>Breakbot</button>
         </section>
             `)
@@ -56,6 +58,9 @@ const main = () =>{
 
     const buildWinner = () => {
         const WinnerScreen = buildDom(`
+            <audio controls autoplay loop>
+            <source src="bonus/ganador.mp3" type="audio/mpeg">
+            </audio>
             <section class = "games-winner">
             <h1>Winner</h1>
             <button class="restart">Restart</button>
@@ -66,6 +71,9 @@ const main = () =>{
     
     const buildGameOver = () => {
     const gameOverScreen = buildDom(`
+        <audio controls autoplay loop>
+        <source src="bonus/Chopin.mp3" type="audio/mpeg">
+        </audio>
         <section class = "games-over">
         <h1>LOSER!</h1>
         <button class="restart">Restart</button>
