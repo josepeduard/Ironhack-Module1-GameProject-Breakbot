@@ -9,7 +9,7 @@ class Ball {
         this.speed = 7;
         this.directionY = 1;
         this.directionX = 1;
-        this.ballRadius =9;
+        this.ballRadius = 9;
         this.lives = lives;
     }
     
@@ -92,9 +92,9 @@ class Ball {
     deleteball(){
         this.x= this.canvas.width/2 ;
         this.y= 151;
-        this.speed = 6;
+        this.speed = 7;
         this.directionY = 1;
-        this.directionX = 1.2;
+        this.directionX = 1;
     }
 
 
