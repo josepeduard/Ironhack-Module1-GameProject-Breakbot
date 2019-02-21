@@ -6,7 +6,7 @@ class Ball {
         this.ctx = this.canvas.getContext('2d');
         this.x= this.canvas.width/2 ;
         this.y= 251;
-        this.speed = 9;
+        this.speed = 8;
         this.directionY = 1;
         this.directionX = 1;
         this.ballRadius = 9;
